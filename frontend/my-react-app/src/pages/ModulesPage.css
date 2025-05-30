@@ -1,0 +1,129 @@
+.modules-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.modules-page h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.module-intro {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.module-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.module-card h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.module-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1; /* Allows paragraph to take available space */
+  margin-bottom: 1.5rem;
+}
+
+.module-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button to the start */
+}
+
+.module-btn:hover {
+  background-color: #218838;
+}
+
+.module-card.coming-soon {
+  background-color: #fff3cd;
+  border: 1px dashed #ffc107;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.module-card.coming-soon h3 {
+  color: #ffc107;
+}
+
+.module-card.coming-soon .module-btn.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.module-cta {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.module-cta a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.module-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .modules-page h2 {
+    font-size: 2rem;
+  }
+  .module-intro {
+    font-size: 1rem;
+  }
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+  .module-card {
+    padding: 1.5rem;
+  }
+  .module-card h3 {
+    font-size: 1.5rem;
+  }
+  .module-card p {
+    font-size: 0.9rem;
+  }
+}

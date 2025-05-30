@@ -1,0 +1,160 @@
+/* InstructorDashboardPage.css */
+
+.tab-navigation {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-navigation button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px; /* To prevent double border */
+}
+
+.tab-navigation button:hover {
+  color: #007bff;
+}
+
+.tab-navigation button.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+  font-weight: 600;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.student-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.student-card h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.student-card p {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.token-controls button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.token-controls button:hover {
+  background-color: #218838;
+}
+
+.token-controls button:last-child {
+  background-color: #ffc107; /* Reset button */
+}
+.token-controls button:last-child:hover {
+  background-color: #e0a800;
+}
+
+.ai-token-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Adjust as needed */
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.ai-token-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f8ff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.ai-token-item button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+.log-item {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #e0efff;
+}
+
+.log-item p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Analytics specific styles */
+.dashboard-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dashboard-section th, .dashboard-section td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.dashboard-section th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.dashboard-section li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  .tab-navigation button {
+    flex: 1 1 auto;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+  .ai-token-grid {
+    grid-template-columns: 1fr;
+  }
+}

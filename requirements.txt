@@ -1,0 +1,12 @@
+Django
+pymongo
+spacy
+python-multipart
+pdfplumber
+docx
+email-validator
+bcrypt
+gTTS
+pydub
+openai-whisper
+groq

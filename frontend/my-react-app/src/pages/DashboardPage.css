@@ -1,0 +1,128 @@
+/* DashboardPage.css (Common styles for all dashboards) */
+.dashboard-page {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-header h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.dashboard-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.dashboard-section h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.loading-spinner, .error-message, .unauthorized-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.unauthorized-message {
+  color: #ffc107;
+}
+
+/* Common styles for token cards */
+.token-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.token-card {
+  background-color: #e9f5ff; /* Light blue background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  border: 1px solid #cce5ff;
+}
+
+.token-card h3 {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.token-card p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .dashboard-header h2 {
+    font-size: 1.8rem;
+  }
+  .logout-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  .dashboard-section {
+    padding: 1rem;
+  }
+  .dashboard-section h3 {
+    font-size: 1.5rem;
+  }
+  .token-summary {
+    grid-template-columns: 1fr; /* Stack on small screens */
+  }
+  .token-card h3 {
+    font-size: 1rem;
+  }
+  .token-card p {
+    font-size: 2rem;
+  }
+}

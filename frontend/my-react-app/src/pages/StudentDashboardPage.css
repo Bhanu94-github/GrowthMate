@@ -1,0 +1,79 @@
+/* StudentDashboardPage.css */
+
+.token-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.token-card {
+  background-color: #e8f5e9; /* Light green */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  border: 1px solid #c8e6c9;
+}
+
+.token-card h3 {
+  font-size: 1.2rem;
+  color: #2e7d32; /* Darker green */
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.token-card p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50; /* Green */
+  margin: 0;
+}
+
+.module-token-details {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: #f0f4f8; /* Light blue-gray */
+  border-radius: 10px;
+  border: 1px solid #e0e7ea;
+}
+
+.module-token-details h4 {
+  font-size: 1.4rem;
+  color: #1976d2; /* Darker blue */
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.module-token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.module-token-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.module-token-item strong {
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .token-summary {
+    grid-template-columns: 1fr;
+  }
+  .module-token-grid {
+    grid-template-columns: 1fr;
+  }
+}
